@@ -1,0 +1,35 @@
+output matrix 262144 x 5376
+6000 held-out steps, exact logits in 10s; best logit is 13.5 std above the mean (median), 5% quantile 8.7; gap to the second: median 22.72, <0.1 in 0.3% of steps
+train dump: 45273 steps; energy of h in the first 1/8/64/256 principal directions: 0.255 0.410 0.610 0.726
+train dump: 10885 distinct tokens chosen; the 1024 most frequent cover 67.4% of steps, 4096: 85.0%
+pca 16 + sign, scale ls: misses of 6000 at K=64/256/1024/4096 | core 0: 21 7 2 1 | core 1024: 3 1 0 0 | core 4096: 3 1 0 0 | worst rank 8790
+     rank   8790 token    672 (chosen 65 times in the train dump) row norm 0.97 (median 0.98), shape 2.49 (median 1.56); logit 44.3 = directions 2.1 + rest 42.2, sketch of the rest 1.1
+     rank   1116 token    672 (chosen 65 times in the train dump) row norm 0.97 (median 0.98), shape 2.49 (median 1.56); logit 42.8 = directions 2.4 + rest 40.4, sketch of the rest 1.7
+     rank    710 token    672 (chosen 65 times in the train dump) row norm 0.97 (median 0.98), shape 2.49 (median 1.56); logit 38.1 = directions -0.4 + rest 38.5, sketch of the rest 2.8
+     rank    504 token    672 (chosen 65 times in the train dump) row norm 0.97 (median 0.98), shape 2.49 (median 1.56); logit 39.2 = directions -0.0 + rest 39.2, sketch of the rest 3.2
+     rank    435 token    691 (chosen 86 times in the train dump) row norm 0.98 (median 0.98), shape 2.01 (median 1.56); logit 40.7 = directions 2.1 + rest 38.6, sketch of the rest 9.8
+     rank    411 token    672 (chosen 65 times in the train dump) row norm 0.97 (median 0.98), shape 2.49 (median 1.56); logit 43.6 = directions 1.8 + rest 41.7, sketch of the rest 2.1
+     rank    270 token 236824 (chosen 1 times in the train dump) row norm 0.98 (median 0.98), shape 1.68 (median 1.56); logit 12.6 = directions -17.6 + rest 30.2, sketch of the rest 18.4
+     rank    248 token    672 (chosen 65 times in the train dump) row norm 0.97 (median 0.98), shape 2.49 (median 1.56); logit 40.6 = directions 0.6 + rest 40.0, sketch of the rest 2.6
+     rank    220 token    672 (chosen 65 times in the train dump) row norm 0.97 (median 0.98), shape 2.49 (median 1.56); logit 52.2 = directions 4.1 + rest 48.1, sketch of the rest 2.3
+     rank    189 token    531 (chosen 351 times in the train dump) row norm 0.98 (median 0.98), shape 2.22 (median 1.56); logit 28.2 = directions -1.1 + rest 29.3, sketch of the rest 6.4
+pca 16 + sign, scale mid: misses of 6000 at K=64/256/1024/4096 | core 0: 21 13 7 3 | core 1024: 1 0 0 0 | core 4096: 1 0 0 0 | worst rank 9117
+pca 16 + sign, scale un: misses of 6000 at K=64/256/1024/4096 | core 0: 57 46 39 30 | core 1024: 14 8 5 2 | core 4096: 11 8 5 2 | worst rank 9471
+pca 32 + sign, scale ls: misses of 6000 at K=64/256/1024/4096 | core 0: 13 5 1 0 | core 1024: 1 1 0 0 | core 4096: 1 1 0 0 | worst rank 2776
+pca 32 + sign, scale mid: misses of 6000 at K=64/256/1024/4096 | core 0: 9 3 2 1 | core 1024: 1 0 0 0 | core 4096: 1 0 0 0 | worst rank 5750
+pca 32 + sign, scale un: misses of 6000 at K=64/256/1024/4096 | core 0: 22 10 7 4 | core 1024: 8 2 1 0 | core 4096: 6 2 1 0 | worst rank 7676
+pca 64 + sign, scale ls: misses of 6000 at K=64/256/1024/4096 | core 0: 2 1 0 0 | core 1024: 2 1 0 0 | core 4096: 2 1 0 0 | worst rank 289
+     rank    289 token 236824 (chosen 1 times in the train dump) row norm 0.98 (median 0.98), shape 1.66 (median 1.55); logit 12.6 = directions -14.1 + rest 26.7, sketch of the rest 14.2
+     rank     93 token 105380 (chosen 0 times in the train dump) row norm 0.98 (median 0.98), shape 1.56 (median 1.55); logit 25.4 = directions -8.9 + rest 34.3, sketch of the rest 17.6
+     rank     48 token  18953 (chosen 0 times in the train dump) row norm 0.98 (median 0.98), shape 1.76 (median 1.55); logit 29.7 = directions -11.2 + rest 40.9, sketch of the rest 19.5
+     rank     46 token    795 (chosen 13 times in the train dump) row norm 0.97 (median 0.98), shape 2.29 (median 1.55); logit 42.3 = directions 1.0 + rest 41.4, sketch of the rest 9.3
+     rank     22 token    672 (chosen 65 times in the train dump) row norm 0.97 (median 0.98), shape 2.39 (median 1.55); logit 38.1 = directions 0.8 + rest 37.3, sketch of the rest 5.4
+     rank     21 token    910 (chosen 18 times in the train dump) row norm 0.98 (median 0.98), shape 1.98 (median 1.55); logit 40.9 = directions -1.1 + rest 42.0, sketch of the rest 9.2
+     rank     19 token  37718 (chosen 0 times in the train dump) row norm 0.98 (median 0.98), shape 1.55 (median 1.55); logit 16.1 = directions -9.5 + rest 25.5, sketch of the rest 14.4
+     rank     19 token    795 (chosen 13 times in the train dump) row norm 0.97 (median 0.98), shape 2.29 (median 1.55); logit 40.1 = directions -0.7 + rest 40.8, sketch of the rest 10.8
+     rank     18 token  83459 (chosen 0 times in the train dump) row norm 0.98 (median 0.98), shape 1.55 (median 1.55); logit 16.8 = directions -10.6 + rest 27.4, sketch of the rest 15.1
+     rank     18 token    795 (chosen 13 times in the train dump) row norm 0.97 (median 0.98), shape 2.29 (median 1.55); logit 46.3 = directions 0.8 + rest 45.5, sketch of the rest 11.8
+pca 64 + sign, scale mid: misses of 6000 at K=64/256/1024/4096 | core 0: 1 0 0 0 | core 1024: 1 0 0 0 | core 4096: 1 0 0 0 | worst rank 87
+pca 64 + sign, scale un: misses of 6000 at K=64/256/1024/4096 | core 0: 5 4 2 0 | core 1024: 3 2 1 0 | core 4096: 2 2 1 0 | worst rank 2418
+done
+STUDY_DONE gemma-4-31B_q4_0-it

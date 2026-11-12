@@ -1,0 +1,21 @@
+160 prompts, 32 at a time | 15480 generated tokens in 76.2 s = 203.0 tok/s total (prompt processing 12.2 s for 3160 tokens included; generation alone 241.9 tok/s) | AVX2, 32 threads
+output matrix 262144 x 2816
+3000 held-out steps, exact logits in 4s; best logit is 11.1 std above the mean (median), 5% quantile 7.4; gap to the second: median 15.19, <0.1 in 0.5% of steps
+train dump: 114218 steps; energy of h in the first 1/8/64/256 principal directions: 0.197 0.327 0.490 0.613
+svd 64                       17 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:  45.100  31.233  19.733   8.667   3.733   1.867 | worst rank 261589
+svd 128                      34 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:  32.867  19.233   8.800   2.867   0.700   0.367 | worst rank 256812
+svd 256                      67 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:  16.167   6.867   2.367   0.467   0.200   0.133 | worst rank 183320
+svd 512                     134 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   3.200   0.800   0.100   0.033   0.000   0.000 | worst rank 6695
+sign                         93 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   4.867   2.700   1.667   0.767   0.333   0.033 | worst rank 68221
+sign/b64                    115 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   4.000   2.300   1.367   0.600   0.133   0.000 | worst rank 44295
+   3 levels: relative rms error of the rows 0.430
+tern                        149 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   0.733   0.133   0.067   0.033   0.000   0.000 | worst rank 9161
+   4 levels: relative rms error of the rows 0.348
+2bit                        186 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   0.300   0.100   0.100   0.000   0.000   0.000 | worst rank 1505
+4bit                        415 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   0.000   0.000   0.000   0.000   0.000   0.000 | worst rank 2
+pca 16 + sign                98 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   0.033   0.000   0.000   0.000   0.000   0.000 | worst rank 81
+pca 64 + sign               110 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   0.000   0.000   0.000   0.000   0.000   0.000 | worst rank 58
+pca 64 + sign/b64           132 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   0.033   0.000   0.000   0.000   0.000   0.000 | worst rank 68
+pca 128 + sign              127 MB | miss % at K=[64, 256, 1024, 4096, 16384, 65536]:   0.000   0.000   0.000   0.000   0.000   0.000 | worst rank 32
+done
+STUDY_DONE gemma-4-26B_q4_0-it

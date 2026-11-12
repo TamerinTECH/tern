@@ -1,0 +1,25 @@
+output matrix 262144 x 2816
+6000 held-out steps, exact logits in 7s; best logit is 11.1 std above the mean (median), 5% quantile 7.4; gap to the second: median 14.84, <0.1 in 0.5% of steps
+train dump: 114218 steps; energy of h in the first 1/8/64/256 principal directions: 0.197 0.327 0.490 0.613
+sign (no directions)         93 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   8.917   6.083   4.200   3.117   2.350   1.333 | worst rank 73692
+pca 1 + sign                 94 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   3.917   0.983   0.183   0.000   0.000   0.000 | worst rank 884
+pca 2 + sign                 94 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   2.767   0.633   0.083   0.000   0.000   0.000 | worst rank 578
+pca 4 + sign                 94 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.917   0.300   0.083   0.000   0.000   0.000 | worst rank 498
+pca 8 + sign                 95 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.467   0.100   0.000   0.000   0.000   0.000 | worst rank 232
+pca 16 + sign                98 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.267   0.050   0.000   0.000   0.000   0.000 | worst rank 147
+pca 32 + sign               102 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.167   0.033   0.000   0.000   0.000   0.000 | worst rank 180
+   worst steps (rank, token, std above mean, gap to 2nd): (180, 87508, 5.6, 0.14)  (66, 61543, 5.5, 4.88)  (38, 210345, 6.6, 1.53)  (33, 191580, 6.5, 0.44)  (32, 98484, 6.6, 2.02)  (19, 41847, 6.1, 0.46)  (18, 16043, 6.0, 0.04)  (17, 55870, 7.2, 3.75)
+pca 32 + sign, scale un      102 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.050   0.017   0.000   0.000   0.000   0.000 | worst rank 101
+pca 32 + sign, scale mid      102 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.067   0.017   0.000   0.000   0.000   0.000 | worst rank 140
+pca 32 i8 + sign, h 8 bit      102 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.167   0.033   0.000   0.000   0.000   0.000 | worst rank 172
+pca 32 i8 + sign, h 6 bit      102 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.183   0.033   0.000   0.000   0.000   0.000 | worst rank 183
+pca 32 i16 + sign           110 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.167   0.033   0.000   0.000   0.000   0.000 | worst rank 179
+pca 64 + sign               110 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.133   0.017   0.000   0.000   0.000   0.000 | worst rank 170
+pca 32 of 500 steps         102 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.233   0.033   0.000   0.000   0.000   0.000 | worst rank 254
+pca 32 of 2000 steps        102 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.167   0.033   0.000   0.000   0.000   0.000 | worst rank 125
+pca 32 of 10000 steps       102 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.167   0.017   0.000   0.000   0.000   0.000 | worst rank 133
+rows' svd 16 + sign          98 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   6.150   4.200   2.600   1.017   0.100   0.017 | worst rank 19033
+rows' svd 64 + sign         110 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   3.950   2.733   1.800   0.583   0.083   0.000 | worst rank 10119
+mean direction + sign        94 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   3.767   0.850   0.117   0.017   0.000   0.000 | worst rank 1025
+done
+STUDY_DONE gemma-4-26B_q4_0-it

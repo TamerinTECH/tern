@@ -1,0 +1,85 @@
+
+$ build/tern -m ~/tern/models/gemma-4-26B_q4_0-it.gguf -p Why is the sky blue? Answer in two sentences.
+The sky appears blue because sunlight is scattered in all directions by the gases and particles in Earth's atmosphere. This phenomenon, known as Rayleigh scattering, affects shorter wavelengths of light more than longer ones, causing blue light to scatter more intensely.
+
+load 1.41 s | prompt 20 tokens, 228.7 tok/s | generation 53 tokens, 55.75 tok/s (output layer 21% of the time) | weights 14695 MB on 4 KB pages | AVX2, 32 threads
+memory: peak 15083 MB resident (at exit: 14525 MB private + 65 MB mapped files, which the system can reclaim)
+
+$ build/tern -m ~/tern/models/gemma-4-31B_q4_0-it.gguf --head plans/gemma-4-31B_q4_0-it.head --assistant ~/tern/models/mtp-gemma-4-31B-it-Q4_0.gguf -p Explain in three sentences why the sea is salty.
+Rainwater becomes slightly acidic as it falls through the air, causing it to erode rocks and release minerals like sodium and chloride. These dissolved salts are carried by rivers and streams into the ocean, where they accumulate over millions of years. Because water evaporates from the ocean but the salt remains behind, the concentration of salinity increases over time.
+
+load 2.67 s | prompt 19 tokens, 50.0 tok/s | generation 71 tokens, 19.97 tok/s (output layer 2% of the time) | weights 18235 MB on huge pages | AVX2, 32 threads
+speculation: 30 passes for 71 tokens (2.37 tokens per pass); 59 guesses, 40 confirmed (68%)
+drafter: 60 steps, 2.02 ms per step
+memory: peak 20981 MB resident (at exit: 19736 MB private + 1143 MB mapped files, which the system can reclaim)
+fast output layer: 2.547 ms per call, 31 calls, 12438 full rows per token
+
+$ build/tern -m ~/tern/models/gemma-4-26B_q4_0-it.gguf --head plans/gemma-4-26B_q4_0-it.head -p Write a haiku about a lighthouse. --temp 0.8 --seed 3 -n 40
+Tall tower of light,
+Guiding ships through stormy seas,
+Safe through the dark night.
+
+load 1.44 s | prompt 17 tokens, 216.3 tok/s | generation 25 tokens, 60.09 tok/s (output layer 7% of the time) | weights 14695 MB on 4 KB pages | AVX2, 32 threads
+memory: peak 15264 MB resident (at exit: 14624 MB private + 640 MB mapped files, which the system can reclaim)
+fast output layer: 1.186 ms per call, 25 calls, 10390 full rows per token
+
+$ printf 'What is the capital of France?\nAnd what is it famous for? One sentence.\n\n' | build/tern -m 26B --head plan -i -n 60
+tern chat - empty line or Ctrl-D to quit
+
+> The capital of France is **Paris**.
+[13 tokens, 70.1 tok/s]
+
+> Paris is world-famous for its iconic landmarks like the Eiffel Tower, its renowned art museums, and its reputation as a global center for fashion and gastronomy.
+[36 tokens, 64.8 tok/s]
+
+> memory: peak 15265 MB resident (at exit: 14624 MB private + 640 MB mapped files, which the system can reclaim)
+fast output layer: 1.142 ms per call, 49 calls, 10471 full rows per token
+
+$ build/tern -m ~/tern/models/gemma-4-26B_q4_0-it.gguf -f bench/prompts_bench.txt -np 32 -n 64 --quiet
+160 prompts, 32 at a time | 10087 generated tokens in 53.6 s = 188.2 tok/s total (prompt processing 12.5 s for 3160 tokens included; generation alone 245.3 tok/s) | AVX2, 32 threads
+memory: peak 18385 MB resident (at exit: 17822 MB private + 191 MB mapped files, which the system can reclaim)
+
+$ build/tern -m ~/tern/models/gemma-4-E2B_q4_0-it.gguf -f /tmp/three.txt -np 3 -n 40
+3 prompts, 3 at a time | 120 generated tokens in 0.6 s = 206.1 tok/s total (prompt processing 0.0 s for 62 tokens included; generation alone 224.0 tok/s) | AVX2, 32 threads
+memory: peak 1913 MB resident (at exit: 1592 MB private + 30 MB mapped files, which the system can reclaim)
+=== 0
+Here are a few options for an email to your boss about bicycles, depending on the **reason** you are writing. Choose the template that best fits your situation.
+
+---
+
+## Option 1
+=== 1
+## ゼロ（0）についての簡単な説明
+
+ゼロ（0）は、**数**の一つであり、非常に重要で基本的な概念です。簡単に言うと、**「何もないこと」「量
+=== 2
+Here is how to solve for x:
+
+**1. Start with the original equation:**
+$$51x + 78 = 137$$
+
+**2. Isolate the
+
+$ build/tern -m ~/tern/models/gemma-4-E2B_q4_0-it.gguf -f bench/prompts_bench.txt -np 32 -n 100 --quiet --make-head /tmp/my.head
+160 prompts, 32 at a time | 15395 generated tokens in 24.8 s = 620.4 tok/s total (prompt processing 2.3 s for 3160 tokens included; generation alone 683.3 tok/s) | AVX2, 32 threads
+plan: 32 directions from 8192 recorded steps hold 41.6% of the hidden states' energy -> /tmp/my.head (192 KB)
+memory: peak 2302 MB resident (at exit: 1921 MB private + 377 MB mapped files, which the system can reclaim)
+
+$ build/tern -m ~/tern/models/gemma-4-E2B_q4_0-it.gguf --head /tmp/my.head --head-check -f bench/prompts_test.txt -np 8 -n 100 --quiet
+60 prompts, 8 at a time | 5919 generated tokens in 17.1 s = 345.8 tok/s total (prompt processing 0.8 s for 1189 tokens included; generation alone 363.2 tok/s) | AVX2, 32 threads
+memory: peak 2205 MB resident (at exit: 1741 MB private + 464 MB mapped files, which the system can reclaim)
+fast output layer: 2.370 ms per call, 800 calls, 14656 full rows per token | same token as the exact layer: 5919 of 5919 (100.000%)
+
+$ TERN_PROF=1 build/tern -m 31B -p ... -n 40
+Rainwater becomes slightly acidic as it falls through the air, causing it to erode rocks and release minerals like sodium and chloride. These dissolved salts are carried by rivers and streams into the
+
+load 2.36 s | prompt 19 tokens, 54.4 tok/s | generation 40 tokens, 12.11 tok/s (output layer 8% of the time) | weights 18235 MB on huge pages | AVX2, 32 threads
+body: 41 passes, 1.4 slots per pass | per pass (ms): total 82.620 = attention matrices 18.579 + feed-forward 47.606 + experts 0.000 + per-layer inputs 0.000 + attention 7.461 + other 8.974 | output layer 6.421
+memory: peak 20338 MB resident (at exit: 19249 MB private + 30 MB mapped files, which the system can reclaim)
+
+$ make test
+cc -O3 -march=native -fno-strict-aliasing -Wall -Wextra -Wno-unused-parameter -pthread tests/kern_test.c build/kernels.o build/quant.o build/pool.o -o build/kern_test -pthread -lm
+build/kern_test
+kernels: AVX2
+all kernel checks passed
+EXAMPLES_DONE

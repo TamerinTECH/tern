@@ -1,0 +1,6 @@
+# The tree is built and run under Linux, also from a Windows checkout through WSL: a CRLF checkout
+# (core.autocrlf=true on Windows) breaks the shell scripts. Keep every text file LF everywhere.
+* text=auto eol=lf
+
+# Plans of the fast output layer: float32 data, no conversion.
+plans/*.head binary

@@ -1,0 +1,160 @@
+Write unit tests for a function that removes duplicates from a list.
+Write a dialogue between two friends discussing Macbeth.
+Give me five interesting facts about antibodies.
+Dame tres datos curiosos sobre Wolfgang Amadeus Mozart.
+Write a JavaScript function that finds the largest element in an array.
+Give step by step advice related to composting.
+Describe Gulliver's Travels in three sentences.
+Plan a weekend around sourdough bread.
+Describe a painting inspired by Les Misérables.
+הסבר במילים פשוטות: evolution by natural selection.
+Write a dialogue between two friends discussing Athens.
+Write an email to my boss about DNA replication.
+Plan a weekend around New Zealand.
+What questions should I ask an expert on public key cryptography?
+What is 14 plus 24? Show your work.
+Give me five interesting facts about Queen Victoria.
+What are common misconceptions about Stephen Hawking?
+Write a dialogue between two friends discussing Macbeth.
+תן לי שלוש עובדות מעניינות על Winston Churchill.
+Write a Python class for a bank account with three methods.
+Write a Rust function that checks whether a number is prime.
+A recipe for 32 people needs 24 grams of flour. How much for 94 people?
+Escribe un cuento corto sobre Leonardo da Vinci.
+Schreibe eine kurze Geschichte über a child's birthday party.
+Write a JavaScript function that removes duplicates from a list.
+Write a formal letter that mentions a road trip.
+Write a news headline and a short article about Rosa Parks.
+Write a diary entry of someone thinking about Paris.
+Write a haiku about the placebo effect.
+Write a C function that converts Celsius to Fahrenheit.
+What questions should I ask an expert on the speed of light?
+Translate to Italian: My friend told me about learning the guitar.
+Escreva uma história curta sobre ancient Rome.
+Write a Python function that validates an email address.
+Quels sont les avantages et les inconvénients de Albert Einstein ?
+Escribe un cuento corto sobre a slow laptop.
+Who or what is New Zealand? Answer briefly.
+Who or what is a stray cat? Answer briefly.
+Explica Albert Einstein en palabras sencillas.
+Tell me a joke about chemical bonds.
+Describe a painting inspired by enzymes.
+Solve for x: 42x + 71 = 127.
+Write a JSON object describing vaccines.
+Explain caching with a short code example.
+Explain caching with a short code example.
+What would Galileo Galilei say about Nikola Tesla?
+Escreva uma história curta sobre Singapore.
+Write a Python function that removes duplicates from a list.
+Create a bullet list of key points about Crime and Punishment.
+a camping trip 에 대해 간단히 설명해 주세요.
+Describe neural networks in three sentences.
+Scrivi una breve storia su Cape Town.
+What is 5 percent of 128?
+Give step by step advice related to tidal forces.
+תן לי שלוש עובדות מעניינות על Frida Kahlo.
+Give me a quiz with three questions about the greenhouse effect.
+Spiega Frida Kahlo in poche frasi.
+Give me five interesting facts about Romeo and Juliet.
+Write unit tests for a function that computes the factorial of n.
+Give me a quiz with three questions about the scientific method.
+What questions should I ask an expert on dolphins?
+Schreibe eine kurze Geschichte über the Himalayas.
+用简单的话解释一下：Mongolia。
+Summarize the plot or history of a difficult boss in four sentences.
+Basit kelimelerle açıkla: dolphins.
+Write an email to my boss about home insulation.
+Give step by step advice related to evolution by natural selection.
+Explain unit tests with a short code example.
+A recipe for 51 people needs 25 grams of flour. How much for 117 people?
+Give me five interesting facts about Hamlet.
+Explain Docker containers with a short code example.
+Écris un court poème sur the Alps.
+Escreva uma história curta sobre the Olympic Games.
+Convert 87 minutes to hours and minutes.
+Find the bug: for i in range(10): print(i * i
+תן לי שלוש עובדות מעניינות על Johannes Gutenberg.
+Describe a painting inspired by skyscrapers.
+What is garbage collection and when should I use it?
+Why does Stephen Hawking matter today?
+Write a diary entry of someone thinking about Albert Einstein.
+Give me a quiz with three questions about the Moon landing.
+Compare Jerusalem and photosynthesis.
+Explique em palavras simples: Florence Nightingale.
+What would Catherine the Great say about the nitrogen cycle?
+Объясни простыми словами: Antarctica.
+Who or what is the Renaissance? Answer briefly.
+A recipe for 91 people needs 7 grams of flour. How much for 141 people?
+Explica a sprained ankle en palabras sencillas.
+Give me five interesting facts about Dracula.
+Make a table with three rows about a first marathon.
+Write a Python class for a student with three methods.
+Spiega the placebo effect in poche frasi.
+用简单的话解释一下：Frida Kahlo。
+Describe the Himalayas in three sentences.
+Dame tres datos curiosos sobre Julius Caesar.
+Convert 47 minutes to hours and minutes.
+Describe a painting inspired by the Scottish Highlands.
+Leg in eenvoudige woorden uit: The Divine Comedy.
+Give me a quiz with three questions about a job interview.
+Basit kelimelerle açıkla: a long flight.
+Write a short story about Aristotle.
+How would you teach a class on New Zealand?
+Describe quantum computers in three sentences.
+Write a diary entry of someone thinking about quantum computers.
+What is a compiler and when should I use it?
+用简单的话解释一下：a job interview。
+כתוב סיפור קצר על the Pythagorean theorem.
+Explain Charles Darwin to a ten year old.
+Translate to Italian: My friend told me about tidal forces.
+Translate to Spanish: Tomorrow we will talk about a stray cat.
+Explique em palavras simples: Albert Einstein.
+Solve for x: 71x + 35 = 127.
+Compare the Big Bang and the Scottish Highlands.
+Write unit tests for a function that computes the greatest common divisor.
+Explain a binary tree with a short code example.
+Schreibe eine kurze Geschichte über Jane Austen.
+Write a Go function that counts the words in a text.
+Give step by step advice related to Gulliver's Travels.
+What is 46 times 68?
+Объясни простыми словами: Charlie Chaplin.
+Explique em palavras simples: Wolfgang Amadeus Mozart.
+Write a diary entry of someone thinking about the Olympic Games.
+Write a C function that merges two sorted lists.
+Write a JavaScript function that removes duplicates from a list.
+Give me a quiz with three questions about a road trip.
+כתוב סיפור קצר על Moby Dick.
+Nenne drei Fakten über Hawaii.
+Plan a weekend around Stephen Hawking.
+Write a diary entry of someone thinking about vaccines.
+Plan a weekend around quantum computers.
+Write a limerick about New Zealand.
+A recipe for 67 people needs 79 grams of flour. How much for 159 people?
+Write a Python function that sorts a list of integers.
+Write a news headline and a short article about Bangkok.
+Plan a weekend around Joan of Arc.
+What are common misconceptions about the nitrogen cycle?
+Write a haiku about saving for retirement.
+What are the pros and cons of Morocco?
+Describe nuclear fusion in three sentences.
+כתוב סיפור קצר על volcanoes.
+Find the bug: for i in range(10): print(i * i
+Make a table with three rows about composting.
+Write an email to my boss about The Iliad.
+Translate to German: I would like to learn more about Crime and Punishment.
+Write a diary entry of someone thinking about a difficult boss.
+Give me five interesting facts about Stockholm.
+Write an email to my boss about a difficult boss.
+Quels sont les avantages et les inconvénients de dolphins ?
+Write a JSON object describing the Big Bang.
+What are common misconceptions about Vienna?
+List the prime numbers between 86 and 190.
+Give step by step advice related to black holes.
+Write an email to my boss about entropy.
+Why does a rental contract matter today?
+Summarize what you know about Vincent van Gogh in one paragraph.
+Write a JavaScript function that counts vowels in a sentence.
+Was sind die Vor- und Nachteile von a vegetarian dinner?
+Explica Frankenstein en palabras sencillas.
+Write a short story about gene editing.
+Give step by step advice related to the Olympic Games.

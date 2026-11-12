@@ -1,0 +1,33 @@
+output matrix 262144 x 2816
+6000 held-out steps, exact logits in 7s; best logit is 11.1 std above the mean (median), 5% quantile 7.4; gap to the second: median 14.84, <0.1 in 0.5% of steps
+train dump: 114218 steps; energy of h in the first 1/8/64/256 principal directions: 0.197 0.327 0.490 0.613
+pca 16: shape of the rows: median 1.548, 90% 1.578, 99% 1.830, 99.9% 1.855; rows above 1.65: 9342, 1.7: 8005, 1.8: 6748, 1.9: 164, 2.0: 102, 2.2: 56
+   rows of tokens chosen in the train dump (18406): median shape 1.549, 90% 1.585; share of generated steps whose token has shape above 1.65: 42.8%, 1.7: 40.0%, 1.8: 34.1%, 1.9: 29.0%, 2.0: 27.1%, 2.2: 20.8%
+   scale ls, rows with shape > 9.9 exact (0 rows, best token among them in 0.0% of steps): misses of 6000 at K=64/256/1024/4096: 3 0 0 0 | worst rank left 147
+   scale ls, rows with shape > 2.0 exact (102 rows, best token among them in 27.2% of steps): misses of 6000 at K=64/256/1024/4096: 3 0 0 0 | worst rank left 147
+   scale ls, rows with shape > 1.9 exact (164 rows, best token among them in 29.0% of steps): misses of 6000 at K=64/256/1024/4096: 3 0 0 0 | worst rank left 147
+   scale ls, rows with shape > 1.8 exact (6748 rows, best token among them in 34.5% of steps): misses of 6000 at K=64/256/1024/4096: 3 0 0 0 | worst rank left 147
+   scale ls, rows with shape > 1.7 exact (8005 rows, best token among them in 40.6% of steps): misses of 6000 at K=64/256/1024/4096: 3 0 0 0 | worst rank left 147
+   scale ls, rows with shape > 1.65 exact (9342 rows, best token among them in 43.2% of steps): misses of 6000 at K=64/256/1024/4096: 3 0 0 0 | worst rank left 147
+   scale mid, rows with shape > 9.9 exact (0 rows, best token among them in 0.0% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 112
+   scale mid, rows with shape > 2.0 exact (102 rows, best token among them in 27.2% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 112
+   scale mid, rows with shape > 1.9 exact (164 rows, best token among them in 29.0% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 112
+   scale mid, rows with shape > 1.8 exact (6748 rows, best token among them in 34.5% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 112
+   scale mid, rows with shape > 1.7 exact (8005 rows, best token among them in 40.6% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 112
+   scale mid, rows with shape > 1.65 exact (9342 rows, best token among them in 43.2% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 112
+pca 32: shape of the rows: median 1.547, 90% 1.576, 99% 1.809, 99.9% 1.832; rows above 1.65: 9045, 1.7: 7859, 1.8: 4578, 1.9: 147, 2.0: 95, 2.2: 49
+   rows of tokens chosen in the train dump (18406): median shape 1.548, 90% 1.583; share of generated steps whose token has shape above 1.65: 43.9%, 1.7: 39.0%, 1.8: 33.0%, 1.9: 28.5%, 2.0: 26.6%, 2.2: 17.0%
+   scale ls, rows with shape > 9.9 exact (0 rows, best token among them in 0.0% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 180
+   scale ls, rows with shape > 2.0 exact (95 rows, best token among them in 26.6% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 180
+   scale ls, rows with shape > 1.9 exact (147 rows, best token among them in 28.4% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 180
+   scale ls, rows with shape > 1.8 exact (4578 rows, best token among them in 33.5% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 180
+   scale ls, rows with shape > 1.7 exact (7859 rows, best token among them in 39.9% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 180
+   scale ls, rows with shape > 1.65 exact (9045 rows, best token among them in 44.4% of steps): misses of 6000 at K=64/256/1024/4096: 2 0 0 0 | worst rank left 180
+   scale mid, rows with shape > 9.9 exact (0 rows, best token among them in 0.0% of steps): misses of 6000 at K=64/256/1024/4096: 1 0 0 0 | worst rank left 140
+   scale mid, rows with shape > 2.0 exact (95 rows, best token among them in 26.6% of steps): misses of 6000 at K=64/256/1024/4096: 1 0 0 0 | worst rank left 140
+   scale mid, rows with shape > 1.9 exact (147 rows, best token among them in 28.4% of steps): misses of 6000 at K=64/256/1024/4096: 1 0 0 0 | worst rank left 140
+   scale mid, rows with shape > 1.8 exact (4578 rows, best token among them in 33.5% of steps): misses of 6000 at K=64/256/1024/4096: 1 0 0 0 | worst rank left 140
+   scale mid, rows with shape > 1.7 exact (7859 rows, best token among them in 39.9% of steps): misses of 6000 at K=64/256/1024/4096: 1 0 0 0 | worst rank left 140
+   scale mid, rows with shape > 1.65 exact (9045 rows, best token among them in 44.4% of steps): misses of 6000 at K=64/256/1024/4096: 1 0 0 0 | worst rank left 140
+done
+STUDY_DONE gemma-4-26B_q4_0-it

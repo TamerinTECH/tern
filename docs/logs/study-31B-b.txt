@@ -1,0 +1,29 @@
+64 prompts, 32 at a time | 6106 generated tokens in 149.9 s = 40.7 tok/s total (prompt processing 24.8 s for 1264 tokens included; generation alone 48.8 tok/s) | AVX2, 32 threads
+output matrix 262144 x 5376
+6000 held-out steps, exact logits in 10s; best logit is 13.5 std above the mean (median), 5% quantile 8.7; gap to the second: median 22.72, <0.1 in 0.3% of steps
+train dump: 45273 steps; energy of h in the first 1/8/64/256 principal directions: 0.255 0.410 0.610 0.726
+sign (no directions)        177 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   2.983   1.733   1.033   0.517   0.350   0.133 | worst rank 165291
+pca 1 + sign                177 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   2.133   1.417   0.933   0.583   0.233   0.083 | worst rank 48479
+pca 2 + sign                178 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.817   1.150   0.683   0.317   0.117   0.067 | worst rank 28916
+pca 4 + sign                178 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.767   1.100   0.583   0.283   0.183   0.067 | worst rank 35724
+pca 8 + sign                179 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.117   0.500   0.133   0.017   0.000   0.000 | worst rank 1401
+pca 16 + sign               181 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.900   0.350   0.117   0.033   0.017   0.000 | worst rank 8790
+pca 16 + sign, scale un      181 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.267   0.950   0.767   0.650   0.500   0.000 | worst rank 9471
+   worst steps (rank, token, std above mean, gap to 2nd): (9471, 672, 13.6, 32.54)  (7882, 672, 12.8, 29.97)  (7623, 611, 13.4, 4.95)  (7573, 611, 13.4, 1.02)  (7518, 236761, 9.7, 15.85)  (7493, 611, 15.1, 29.54)  (7468, 611, 14.7, 16.99)  (7444, 611, 14.7, 19.77)
+   ranks: >1: 525 >4: 126 >16: 76 >64: 57 >128: 52 >256: 46 >512: 42 >1024: 39 >2048: 35
+pca 32 + sign               186 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.417   0.217   0.083   0.017   0.000   0.000 | worst rank 2776
+   worst steps (rank, token, std above mean, gap to 2nd): (2776, 672, 13.6, 32.54)  (1005, 672, 12.8, 29.97)  (496, 236824, 5.4, 0.83)  (468, 795, 11.7, 5.08)  (352, 672, 12.6, 24.90)  (234, 691, 8.6, 0.64)  (223, 672, 12.9, 26.14)  (207, 672, 13.6, 32.32)
+pca 32 + sign, scale un      186 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.533   0.367   0.167   0.117   0.067   0.000 | worst rank 7676
+pca 32 + sign, scale mid      186 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.183   0.150   0.050   0.033   0.017   0.000 | worst rank 5750
+pca 32 i8 + sign, h 8 bit      186 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.400   0.217   0.083   0.017   0.000   0.000 | worst rank 2378
+pca 32 i8 + sign, h 6 bit      186 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.383   0.217   0.117   0.017   0.000   0.000 | worst rank 2982
+pca 32 i16 + sign           194 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.417   0.217   0.083   0.017   0.000   0.000 | worst rank 2882
+pca 64 + sign               194 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.183   0.033   0.017   0.000   0.000   0.000 | worst rank 289
+pca 32 of 500 steps         186 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.883   0.217   0.083   0.017   0.000   0.000 | worst rank 1329
+pca 32 of 2000 steps        186 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.417   0.167   0.033   0.000   0.000   0.000 | worst rank 612
+pca 32 of 10000 steps       186 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.367   0.200   0.083   0.017   0.000   0.000 | worst rank 3060
+rows' svd 16 + sign         181 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   2.467   1.500   0.900   0.550   0.383   0.300 | worst rank 162162
+rows' svd 64 + sign         194 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   2.350   1.267   0.883   0.450   0.367   0.250 | worst rank 157960
+mean direction + sign       177 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   2.167   1.383   0.883   0.583   0.183   0.083 | worst rank 37632
+done
+STUDY_DONE gemma-4-31B_q4_0-it

@@ -1,0 +1,60 @@
+Write an email to my boss about bicycles.
+the number zeroについて簡単に説明してください。
+Solve for x: 51x + 78 = 137.
+What is 15 plus 96? Show your work.
+Explain this code: for i in range(10): print(i * i)
+Write a short story about the Sahara desert.
+Give me five interesting facts about ancient Rome.
+Write a JavaScript function that removes duplicates from a list.
+Compare the Moon landing and antibiotics.
+Give me five interesting facts about the Amazon rainforest.
+Explain this code: for i in range(10): print(i * i)
+Write a Python function that computes Fibonacci numbers.
+Compare machine learning and solar panels.
+Write a haiku about solar panels.
+What questions should I ask an expert on the Olympic Games?
+Schreibe eine kurze Geschichte über glaciers.
+Напиши короткий рассказ на тему: photosynthesis.
+Écris un court poème sur the Silk Road.
+Erkläre solar panels in einfachen Worten.
+Translate to German: I would like to learn more about solar panels.
+הסבר במילים פשוטות: electric cars.
+Create a bullet list of key points about the printing press.
+Give step by step instructions related to skyscrapers.
+Write a JavaScript function that counts the words in a text.
+Écris un court poème sur jazz music.
+Напиши короткий рассказ на тему: volcanoes.
+Write a JSON object describing antibiotics.
+Write a news headline and a short article about electric cars.
+Explique em palavras simples: climate change.
+Write a product description related to the immune system.
+Explain climate change to a ten year old.
+Summarize the history of a rainy day in Tokyo in one paragraph.
+Escribe un cuento corto sobre solar panels.
+Write a product description related to photosynthesis.
+Convert 76 minutes to hours and minutes.
+用简单的话解释一下：the French Revolution。
+用简单的话解释一下：the immune system。
+Explain the Moon landing to a ten year old.
+Write a news headline and a short article about dolphins.
+Give step by step instructions related to sleep.
+Write a SQL query that joins employees with departments.
+Schreibe eine kurze Geschichte über the Sahara desert.
+Explain this code: for i in range(10): print(i * i)
+What questions should I ask an expert on a rainy day in Tokyo?
+Give step by step instructions related to the Amazon rainforest.
+Write a poem about glaciers.
+A train travels 79 km in 68 hours. What is its speed?
+What questions should I ask an expert on bicycles?
+Explain the Silk Road to a ten year old.
+Écris un court poème sur ancient Rome.
+Translate to Spanish: Tomorrow we will talk about chess openings.
+Give me five interesting facts about skyscrapers.
+Write a dialogue between two friends discussing volcanoes.
+Explain antibiotics to a ten year old.
+Explain this code: for i in range(10): print(i * i)
+用简单的话解释一下：honey bees。
+Give step by step instructions related to the French Revolution.
+What are the pros and cons of money?
+Erkläre the ocean in einfachen Worten.
+Give me five interesting facts about solar panels.

@@ -1,0 +1,16 @@
+My sourdough starter smells like nail polish remover. What went wrong and how do I fix it?
+Draft a polite message to my landlord asking to fix a leaking kitchen tap within a week.
+What is the difference between a mutex and a semaphore? Give a short example of when to use each.
+Plan a three day trip to Lisbon for someone who likes food and old buildings but hates crowds.
+Why does ice float on water? Explain it to a curious adult in one paragraph.
+Write a Rust function that returns the longest common prefix of a list of strings.
+Summarize the plot of Romeo and Juliet in exactly four sentences.
+Ich habe morgen ein Vorstellungsgespräch als Elektriker. Welche Fragen könnten kommen?
+תן לי שלושה רעיונות לארוחת ערב מהירה עם עוף ואורז.
+My Python script raises "KeyError: 'name'" when reading a CSV file. What are the likely causes?
+Compare renting and buying a home for a young couple, as a short table of pros and cons.
+Write a limerick about a cat who is afraid of cucumbers.
+Explain how a heat pump works and why it can be more than 100% efficient.
+Quels sont les avantages et les inconvénients du télétravail ?
+Give me a 20 minute bodyweight workout I can do in a small apartment.
+What should I check before buying a used car from a private seller?

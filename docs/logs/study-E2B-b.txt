@@ -1,0 +1,29 @@
+160 prompts, 32 at a time | 15395 generated tokens in 25.8 s = 596.3 tok/s total (prompt processing 2.8 s for 3160 tokens included; generation alone 668.8 tok/s) | AVX2, 32 threads
+output matrix 262144 x 1536
+6000 held-out steps, exact logits in 8s; best logit is 9.7 std above the mean (median), 5% quantile 6.7; gap to the second: median 8.11, <0.1 in 1.1% of steps
+train dump: 189445 steps; energy of h in the first 1/8/64/256 principal directions: 0.068 0.262 0.478 0.656
+sign (no directions)         51 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:  11.117   5.850   2.633   0.883   0.283   0.000 | worst rank 15038
+pca 1 + sign                 52 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   9.433   3.267   1.233   0.300   0.050   0.000 | worst rank 6573
+pca 2 + sign                 52 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   6.767   1.933   0.400   0.033   0.017   0.000 | worst rank 5105
+pca 4 + sign                 52 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   4.233   1.200   0.267   0.033   0.000   0.000 | worst rank 1510
+pca 8 + sign                 53 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   3.083   0.767   0.167   0.050   0.000   0.000 | worst rank 2372
+pca 16 + sign                56 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   2.167   0.383   0.083   0.000   0.000   0.000 | worst rank 401
+pca 16 + sign, scale un       56 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.283   0.267   0.067   0.017   0.000   0.000 | worst rank 3919
+   worst steps (rank, token, std above mean, gap to 2nd): (3919, 532, 7.4, 2.33)  (544, 236761, 7.8, 1.47)  (533, 531, 7.0, 0.67)  (263, 236761, 6.7, 2.27)  (168, 43749, 5.6, 0.54)  (161, 65470, 5.7, 1.49)  (148, 189480, 6.3, 1.34)  (145, 506, 8.7, 5.53)
+   ranks: >1: 1347 >4: 372 >16: 77 >64: 16 >128: 10 >256: 4 >512: 3 >1024: 1 >2048: 1
+pca 32 + sign                60 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.167   0.133   0.000   0.000   0.000   0.000 | worst rank 233
+   worst steps (rank, token, std above mean, gap to 2nd): (233, 189480, 6.3, 1.34)  (123, 529, 6.0, 0.02)  (123, 531, 7.0, 0.67)  (107, 779, 7.0, 0.03)  (94, 88457, 6.1, 0.10)  (83, 235928, 5.8, 0.40)  (78, 156883, 5.9, 1.17)  (69, 840, 7.0, 1.02)
+pca 32 + sign, scale un       60 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.717   0.033   0.000   0.000   0.000   0.000 | worst rank 199
+pca 32 + sign, scale mid       60 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.667   0.033   0.000   0.000   0.000   0.000 | worst rank 172
+pca 32 i8 + sign, h 8 bit       60 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.133   0.133   0.000   0.000   0.000   0.000 | worst rank 244
+pca 32 i8 + sign, h 6 bit       60 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.233   0.133   0.000   0.000   0.000   0.000 | worst rank 224
+pca 32 i16 + sign            68 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.167   0.133   0.000   0.000   0.000   0.000 | worst rank 233
+pca 64 + sign                68 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   0.567   0.133   0.000   0.000   0.000   0.000 | worst rank 211
+pca 32 of 500 steps          60 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.333   0.133   0.000   0.000   0.000   0.000 | worst rank 228
+pca 32 of 2000 steps         60 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.250   0.117   0.033   0.000   0.000   0.000 | worst rank 438
+pca 32 of 10000 steps        60 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   1.083   0.133   0.017   0.000   0.000   0.000 | worst rank 309
+rows' svd 16 + sign          56 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   6.167   2.417   0.667   0.083   0.000   0.000 | worst rank 2698
+rows' svd 64 + sign          68 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   6.017   2.083   0.567   0.133   0.017   0.000 | worst rank 4522
+mean direction + sign        52 MB | miss % at K=[16, 64, 256, 1024, 4096, 16384]:   7.050   2.183   0.500   0.083   0.017   0.000 | worst rank 12688
+done
+STUDY_DONE gemma-4-E2B_q4_0-it

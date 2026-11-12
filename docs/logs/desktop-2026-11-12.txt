@@ -1,0 +1,67 @@
+##### round 1
+== machine: AMD Ryzen 5 8400F 6-Core Processor, 12 logical cpus, 31 GB
+== model: gemma-4-E2B_q4_0-it.gguf  threads: 6
+-- tern, one stream, exact output layer:               18.8 tok/s  (300 tokens; per prompt 15.9 - 22.3)
+-- tern, one stream, fast output layer:                25.1 tok/s  (300 tokens; per prompt 21.8 - 27.2)
+-- tern, one stream, drafter (2 guesses), exact layer:  34.5 tok/s  (300 tokens, 1.99 tokens per pass; per prompt 30.0 - 48.3)
+-- tern, one stream, drafter (2 guesses), fast layer:   41.9 tok/s  (300 tokens, 1.99 tokens per pass; per prompt 33.0 - 59.9)
+-- tern, one stream, drafter (3 guesses), exact layer:  35.6 tok/s  (300 tokens, 2.19 tokens per pass; per prompt 27.5 - 58.1)
+-- tern, one stream, drafter (3 guesses), fast layer:   38.7 tok/s  (300 tokens, 2.19 tokens per pass; per prompt 30.5 - 61.0)
+-- tern, 8 sequences in parallel, exact output layer: 95.6 tok/s total
+-- tern, 8 sequences in parallel, fast output layer:  104.4 tok/s total
+-- tern, 32 sequences in parallel, exact output layer: 135.2 tok/s total
+-- fast output layer vs exact, same hidden states:     2397 of 2397 (100.000%)
+-- tern, one stream, exact output layer, again:        17.5 tok/s  (300 tokens; per prompt 15.2 - 19.0)   (drift of the machine since the first line)
+-- llama.cpp, one stream (llama-bench, 6 threads):
+     | gemma4 E2B Q4_0                |   3.10 GiB |     4.63 B | CPU        |       6 |           tg100 |         14.36 ± 0.53 |
+-- llama.cpp, one stream, drafter (3 guesses):          20.2 tok/s  (300 tokens, 161 of 399 drafted tokens accepted)
+-- llama.cpp, parallel sequences (llama-batched-bench: 32 prompt tokens, 40 generated per sequence):
+     |    PP |     TG |    B |   N_KV |   T_PP s | S_PP t/s |   T_TG s | S_TG t/s |      T s |    S t/s |
+     |-------|--------|------|--------|----------|----------|----------|----------|----------|----------|
+     |    32 |     40 |    8 |    576 |    2.718 |    94.19 |    8.109 |    39.46 |   10.827 |    53.20 |
+     |    32 |     40 |   32 |   2304 |    9.430 |   108.59 |   15.691 |    81.58 |   25.120 |    91.72 |
+##### round 2
+== machine: AMD Ryzen 5 8400F 6-Core Processor, 12 logical cpus, 31 GB
+== model: gemma-4-E2B_q4_0-it.gguf  threads: 6
+-- tern, one stream, exact output layer:               12.0 tok/s  (300 tokens; per prompt 11.4 - 12.9)
+-- tern, one stream, fast output layer:                20.2 tok/s  (300 tokens; per prompt 16.8 - 24.5)
+-- tern, one stream, drafter (2 guesses), exact layer:  31.3 tok/s  (300 tokens, 1.99 tokens per pass; per prompt 26.1 - 43.5)
+-- tern, one stream, drafter (2 guesses), fast layer:   37.9 tok/s  (300 tokens, 1.99 tokens per pass; per prompt 29.1 - 56.2)
+-- tern, one stream, drafter (3 guesses), exact layer:  30.0 tok/s  (300 tokens, 2.19 tokens per pass; per prompt 22.8 - 55.8)
+-- tern, one stream, drafter (3 guesses), fast layer:   33.4 tok/s  (300 tokens, 2.19 tokens per pass; per prompt 26.4 - 63.6)
+-- tern, 8 sequences in parallel, exact output layer: 95.1 tok/s total
+-- tern, 8 sequences in parallel, fast output layer:  95.5 tok/s total
+-- tern, 32 sequences in parallel, exact output layer: 85.3 tok/s total
+-- fast output layer vs exact, same hidden states:     2397 of 2397 (100.000%)
+-- tern, one stream, exact output layer, again:        15.0 tok/s  (300 tokens; per prompt 12.1 - 17.2)   (drift of the machine since the first line)
+-- llama.cpp, one stream (llama-bench, 6 threads):
+     | gemma4 E2B Q4_0                |   3.10 GiB |     4.63 B | CPU        |       6 |           tg100 |         14.92 ± 3.73 |
+-- llama.cpp, one stream, drafter (3 guesses):          29.5 tok/s  (300 tokens, 161 of 399 drafted tokens accepted)
+-- llama.cpp, parallel sequences (llama-batched-bench: 32 prompt tokens, 40 generated per sequence):
+     |    PP |     TG |    B |   N_KV |   T_PP s | S_PP t/s |   T_TG s | S_TG t/s |      T s |    S t/s |
+     |-------|--------|------|--------|----------|----------|----------|----------|----------|----------|
+     |    32 |     40 |    8 |    576 |    1.760 |   145.43 |    5.081 |    62.99 |    6.841 |    84.20 |
+     |    32 |     40 |   32 |   2304 |    7.115 |   143.93 |   15.090 |    84.82 |   22.205 |   103.76 |
+##### round 3
+== machine: AMD Ryzen 5 8400F 6-Core Processor, 12 logical cpus, 31 GB
+== model: gemma-4-E2B_q4_0-it.gguf  threads: 6
+-- tern, one stream, exact output layer:               17.0 tok/s  (300 tokens; per prompt 15.4 - 19.1)
+-- tern, one stream, fast output layer:                23.5 tok/s  (300 tokens; per prompt 20.4 - 25.5)
+-- tern, one stream, drafter (2 guesses), exact layer:  30.5 tok/s  (300 tokens, 1.99 tokens per pass; per prompt 24.2 - 41.6)
+-- tern, one stream, drafter (2 guesses), fast layer:   41.3 tok/s  (300 tokens, 1.99 tokens per pass; per prompt 34.9 - 57.9)
+-- tern, one stream, drafter (3 guesses), exact layer:  32.7 tok/s  (300 tokens, 2.19 tokens per pass; per prompt 27.0 - 52.6)
+-- tern, one stream, drafter (3 guesses), fast layer:   37.8 tok/s  (300 tokens, 2.19 tokens per pass; per prompt 33.4 - 49.5)
+-- tern, 8 sequences in parallel, exact output layer: 91.4 tok/s total
+-- tern, 8 sequences in parallel, fast output layer:  103.0 tok/s total
+-- tern, 32 sequences in parallel, exact output layer: 137.0 tok/s total
+-- fast output layer vs exact, same hidden states:     2397 of 2397 (100.000%)
+-- tern, one stream, exact output layer, again:        15.8 tok/s  (300 tokens; per prompt 14.1 - 16.9)   (drift of the machine since the first line)
+-- llama.cpp, one stream (llama-bench, 6 threads):
+     | gemma4 E2B Q4_0                |   3.10 GiB |     4.63 B | CPU        |       6 |           tg100 |         16.50 ± 1.58 |
+-- llama.cpp, one stream, drafter (3 guesses):          26.2 tok/s  (300 tokens, 161 of 399 drafted tokens accepted)
+-- llama.cpp, parallel sequences (llama-batched-bench: 32 prompt tokens, 40 generated per sequence):
+     |    PP |     TG |    B |   N_KV |   T_PP s | S_PP t/s |   T_TG s | S_TG t/s |      T s |    S t/s |
+     |-------|--------|------|--------|----------|----------|----------|----------|----------|----------|
+     |    32 |     40 |    8 |    576 |    1.735 |   147.57 |    5.360 |    59.71 |    7.094 |    81.19 |
+     |    32 |     40 |   32 |   2304 |    6.891 |   148.60 |   12.853 |    99.59 |   19.744 |   116.70 |
+DESKTOP_BENCH_DONE

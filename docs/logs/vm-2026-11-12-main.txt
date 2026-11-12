@@ -1,0 +1,103 @@
+Thu Nov 12 12:54:16 UTC 2026
+== machine: AMD EPYC-Milan Processor, 32 logical cpus, 246 GB
+== model: gemma-4-E2B_q4_0-it.gguf  threads: 32
+-- tern, one stream, exact output layer:               96.9 tok/s  (946 tokens; per prompt 95.3 - 97.8)
+-- tern, one stream, fast output layer:                118.4 tok/s  (946 tokens; per prompt 116.8 - 119.1)
+-- tern, one stream, exact layer, TERN_HUGE=1:         91.2 tok/s  (946 tokens; per prompt 87.2 - 94.1)
+-- tern, one stream, fast layer, TERN_HUGE=1:          104.7 tok/s  (946 tokens; per prompt 97.2 - 107.9)
+-- tern, one stream, drafter (2 guesses), exact layer:  116.8 tok/s  (946 tokens, 1.85 tokens per pass; per prompt 97.2 - 163.2)
+-- tern, one stream, drafter (2 guesses), fast layer:   135.1 tok/s  (946 tokens, 1.85 tokens per pass; per prompt 117.5 - 184.7)
+-- tern, one stream, drafter (3 guesses), exact layer:  122.4 tok/s  (946 tokens, 2.01 tokens per pass; per prompt 94.4 - 201.7)
+-- tern, one stream, drafter (3 guesses), fast layer:   133.3 tok/s  (946 tokens, 2.01 tokens per pass; per prompt 102.9 - 225.5)
+-- tern, 8 sequences in parallel, exact output layer: 421.4 tok/s total
+-- tern, 8 sequences in parallel, fast output layer:  433.2 tok/s total
+-- tern, 32 sequences in parallel, exact output layer: 599.1 tok/s total
+-- fast output layer vs exact, same hidden states:     15395 of 15395 (100.000%)
+-- tern, one stream, exact output layer, again:        96.2 tok/s  (946 tokens; per prompt 91.0 - 99.0)   (drift of the machine since the first line)
+-- llama.cpp, one stream (llama-bench, 32 threads):
+     | gemma4 E2B Q4_0                |   3.10 GiB |     4.63 B | CPU        |      32 |           tg160 |         80.69 ± 0.02 |
+-- llama.cpp, one stream (llama-bench, 16 threads):
+     | gemma4 E2B Q4_0                |   3.10 GiB |     4.63 B | CPU        |      16 |           tg160 |         69.91 ± 0.25 |
+-- llama.cpp, one stream, drafter (3 guesses):          83.7 tok/s  (946 tokens, 468 of 1402 drafted tokens accepted)
+-- llama.cpp, parallel sequences (llama-batched-bench: 32 prompt tokens, 64 generated per sequence):
+     |    PP |     TG |    B |   N_KV |   T_PP s | S_PP t/s |   T_TG s | S_TG t/s |      T s |    S t/s |
+     |-------|--------|------|--------|----------|----------|----------|----------|----------|----------|
+     |    32 |     64 |    8 |    768 |    0.423 |   604.87 |    2.073 |   246.99 |    2.496 |   307.67 |
+     |    32 |     64 |   32 |   3072 |    1.605 |   638.06 |    4.617 |   443.62 |    6.221 |   493.78 |
+== machine: AMD EPYC-Milan Processor, 32 logical cpus, 246 GB
+== model: gemma-4-E4B_q4_0-it.gguf  threads: 32
+-- tern, one stream, exact output layer:               53.8 tok/s  (951 tokens; per prompt 51.0 - 55.9)
+-- tern, one stream, fast output layer:                62.4 tok/s  (951 tokens; per prompt 58.6 - 64.2)
+-- tern, one stream, exact layer, TERN_HUGE=1:         50.3 tok/s  (951 tokens; per prompt 49.1 - 51.3)
+-- tern, one stream, fast layer, TERN_HUGE=1:          59.3 tok/s  (951 tokens; per prompt 57.5 - 61.8)
+-- tern, one stream, drafter (2 guesses), exact layer:  63.6 tok/s  (951 tokens, 1.94 tokens per pass; per prompt 58.1 - 85.9)
+-- tern, one stream, drafter (2 guesses), fast layer:   73.8 tok/s  (951 tokens, 1.94 tokens per pass; per prompt 66.8 - 94.2)
+-- tern, one stream, drafter (3 guesses), exact layer:  69.0 tok/s  (951 tokens, 2.14 tokens per pass; per prompt 59.6 - 103.4)
+-- tern, one stream, drafter (3 guesses), fast layer:   72.3 tok/s  (951 tokens, 2.14 tokens per pass; per prompt 63.3 - 104.4)
+-- tern, 8 sequences in parallel, exact output layer: 222.9 tok/s total
+-- tern, 8 sequences in parallel, fast output layer:  240.3 tok/s total
+-- tern, 32 sequences in parallel, exact output layer: 324.3 tok/s total
+-- fast output layer vs exact, same hidden states:     15384 of 15384 (100.000%)
+-- tern, one stream, exact output layer, again:        52.1 tok/s  (951 tokens; per prompt 50.7 - 53.5)   (drift of the machine since the first line)
+-- llama.cpp, one stream (llama-bench, 32 threads):
+     | gemma4 E4B Q4_0                |   4.79 GiB |     7.46 B | CPU        |      32 |           tg160 |         41.96 ± 0.30 |
+-- llama.cpp, one stream (llama-bench, 16 threads):
+     | gemma4 E4B Q4_0                |   4.79 GiB |     7.46 B | CPU        |      16 |           tg160 |         38.25 ± 0.14 |
+-- llama.cpp, one stream, drafter (3 guesses):          55.0 tok/s  (952 tokens, 505 of 1310 drafted tokens accepted)
+-- llama.cpp, parallel sequences (llama-batched-bench: 32 prompt tokens, 64 generated per sequence):
+     |    PP |     TG |    B |   N_KV |   T_PP s | S_PP t/s |   T_TG s | S_TG t/s |      T s |    S t/s |
+     |-------|--------|------|--------|----------|----------|----------|----------|----------|----------|
+     |    32 |     64 |    8 |    768 |    0.836 |   306.32 |    3.680 |   139.12 |    4.516 |   170.06 |
+     |    32 |     64 |   32 |   3072 |    3.281 |   312.14 |    8.848 |   231.46 |   12.129 |   253.29 |
+== machine: AMD EPYC-Milan Processor, 32 logical cpus, 246 GB
+== model: gemma-4-26B_q4_0-it.gguf  threads: 32
+-- tern, one stream, exact output layer:               54.6 tok/s  (959 tokens; per prompt 52.4 - 56.0)
+-- tern, one stream, fast output layer:                63.4 tok/s  (959 tokens; per prompt 56.6 - 65.5)
+-- tern, one stream, exact layer, TERN_HUGE=1:         52.3 tok/s  (959 tokens; per prompt 51.1 - 52.9)
+-- tern, one stream, fast layer, TERN_HUGE=1:          61.7 tok/s  (959 tokens; per prompt 60.7 - 62.5)
+-- tern, one stream, drafter (2 guesses), exact layer:  59.2 tok/s  (959 tokens, 2.25 tokens per pass; per prompt 51.2 - 74.2)
+-- tern, one stream, drafter (2 guesses), fast layer:   63.7 tok/s  (959 tokens, 2.25 tokens per pass; per prompt 55.2 - 79.6)
+-- tern, one stream, drafter (3 guesses), exact layer:  57.0 tok/s  (959 tokens, 2.66 tokens per pass; per prompt 45.4 - 77.4)
+-- tern, one stream, drafter (3 guesses), fast layer:   61.2 tok/s  (959 tokens, 2.66 tokens per pass; per prompt 49.0 - 85.1)
+-- tern, 8 sequences in parallel, exact output layer: 131.3 tok/s total
+-- tern, 8 sequences in parallel, fast output layer:  140.2 tok/s total
+-- tern, 32 sequences in parallel, exact output layer: 239.6 tok/s total
+-- fast output layer vs exact, same hidden states:     15480 of 15480 (100.000%)
+-- tern, one stream, exact output layer, again:        55.2 tok/s  (959 tokens; per prompt 54.3 - 55.9)   (drift of the machine since the first line)
+-- llama.cpp, one stream (llama-bench, 32 threads):
+     | gemma4 26B.A4B Q4_0            |  13.43 GiB |    25.23 B | CPU        |      32 |           tg160 |         31.82 ± 0.19 |
+-- llama.cpp, one stream (llama-bench, 16 threads):
+     | gemma4 26B.A4B Q4_0            |  13.43 GiB |    25.23 B | CPU        |      16 |           tg160 |         31.50 ± 0.09 |
+-- llama.cpp, one stream, drafter (3 guesses):          39.7 tok/s  (950 tokens, 583 of 1077 drafted tokens accepted)
+-- llama.cpp, parallel sequences (llama-batched-bench: 32 prompt tokens, 64 generated per sequence):
+     |    PP |     TG |    B |   N_KV |   T_PP s | S_PP t/s |   T_TG s | S_TG t/s |      T s |    S t/s |
+     |-------|--------|------|--------|----------|----------|----------|----------|----------|----------|
+     |    32 |     64 |    8 |    768 |    0.851 |   300.77 |    5.217 |    98.14 |    6.068 |   126.56 |
+     |    32 |     64 |   32 |   3072 |    3.322 |   308.25 |   10.860 |   188.58 |   14.182 |   216.62 |
+== machine: AMD EPYC-Milan Processor, 32 logical cpus, 246 GB
+== model: gemma-4-31B_q4_0-it.gguf  threads: 32
+-- tern, one stream, exact output layer:               10.2 tok/s  (480 tokens; per prompt 10.0 - 10.3)
+-- tern, one stream, fast output layer:                10.3 tok/s  (480 tokens; per prompt 10.1 - 10.8)
+-- tern, one stream, exact layer, TERN_HUGE=1:         11.1 tok/s  (480 tokens; per prompt 10.8 - 11.5)
+-- tern, one stream, fast layer, TERN_HUGE=1:          11.8 tok/s  (480 tokens; per prompt 11.7 - 11.9)
+-- tern, one stream, drafter (2 guesses), exact layer:  17.6 tok/s  (480 tokens, 2.44 tokens per pass; per prompt 16.3 - 20.8)
+-- tern, one stream, drafter (2 guesses), fast layer:   18.2 tok/s  (480 tokens, 2.44 tokens per pass; per prompt 16.6 - 21.3)
+-- tern, one stream, drafter (3 guesses), exact layer:  17.0 tok/s  (480 tokens, 2.84 tokens per pass; per prompt 14.5 - 21.1)
+-- tern, one stream, drafter (3 guesses), fast layer:   18.2 tok/s  (480 tokens, 2.84 tokens per pass; per prompt 16.0 - 21.5)
+-- tern, 8 sequences in parallel, exact output layer: 35.4 tok/s total
+-- tern, 8 sequences in parallel, fast output layer:  33.9 tok/s total
+-- tern, 32 sequences in parallel, exact output layer: 52.2 tok/s total
+-- fast output layer vs exact, same hidden states:     4547 of 4547 (100.000%)
+-- tern, one stream, exact output layer, again:        8.2 tok/s  (480 tokens; per prompt 5.7 - 10.9)   (drift of the machine since the first line)
+-- llama.cpp, one stream (llama-bench, 32 threads):
+     | gemma4 31B Q4_0                |  16.42 GiB |    30.70 B | CPU        |      32 |           tg120 |          5.73 ± 0.02 |
+-- llama.cpp, one stream (llama-bench, 16 threads):
+     | gemma4 31B Q4_0                |  16.42 GiB |    30.70 B | CPU        |      16 |           tg120 |          5.53 ± 0.02 |
+-- llama.cpp, one stream, drafter (3 guesses):          12.9 tok/s  (480 tokens, 310 of 492 drafted tokens accepted)
+-- llama.cpp, parallel sequences (llama-batched-bench: 32 prompt tokens, 48 generated per sequence):
+     |    PP |     TG |    B |   N_KV |   T_PP s | S_PP t/s |   T_TG s | S_TG t/s |      T s |    S t/s |
+     |-------|--------|------|--------|----------|----------|----------|----------|----------|----------|
+     |    32 |     48 |    8 |    640 |    5.649 |    45.32 |   14.796 |    25.95 |   20.445 |    31.30 |
+     |    32 |     48 |   32 |   2560 |   21.916 |    46.72 |   37.513 |    40.95 |   59.429 |    43.08 |
+Thu Nov 12 13:31:22 UTC 2026
+BENCH_FINAL3_DONE

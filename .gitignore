@@ -1,0 +1,35 @@
+# build outputs (make BUILD=...)
+build/
+build-*/
+*.o
+
+# model files are downloaded, never committed
+models/
+*.gguf
+*.safetensors
+
+# large or regenerable data: recorded hidden states (--dump), n-gram tables, numpy caches
+*.bin
+*.ngram
+*.npy
+*.npz
+
+# plans of the fast output layer are generated (tern --make-head); the four in plans/ belong to the repository
+*.head
+!plans/*.head
+
+# secrets and notes about private machines
+hf.token
+*.token
+.env
+.env.*
+CLAUDE.local.md
+
+# python / editor / misc
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.idea/
+*.swp
+*.log

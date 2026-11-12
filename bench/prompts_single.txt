@@ -1,0 +1,8 @@
+Explain how a refrigerator works, in one paragraph.
+Write a Python function that merges two sorted lists into one sorted list, and explain it briefly.
+What were the main causes of the First World War? Answer in about 150 words.
+Erkläre in einfachen Worten, wie ein Elektromotor funktioniert.
+Give me a step-by-step plan for learning to play the piano as an adult.
+Summarize the plot of Romeo and Juliet in a short paragraph and name its main themes.
+Describe the water cycle and why it matters for agriculture.
+Write a short story about a lighthouse keeper who finds a message in a bottle.

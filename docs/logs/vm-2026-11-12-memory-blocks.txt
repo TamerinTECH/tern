@@ -1,0 +1,13 @@
+== round 1: 31B, 48 prompts, 32 at a time, with the agreement check
+generation alone 49.7 tok/s
+-- then: three 16 GB buffers on huge pages, each allocated while the earlier ones are kept
+buffer 1: 32 threads, touch 1, regions of    250 MB (   8000 KB per thread):  242.5 GB/s,  1081.0 microseconds per region
+buffer 2: 32 threads, touch 1, regions of    250 MB (   8000 KB per thread):  105.5 GB/s,  2483.8 microseconds per region
+buffer 3: 32 threads, touch 1, regions of    250 MB (   8000 KB per thread):  103.5 GB/s,  2532.9 microseconds per region
+== round 2: 31B, 48 prompts, 32 at a time, with the agreement check
+generation alone 49.3 tok/s
+-- then: one stream of the 31B, three times
+generation 40 tokens, 7.23 tok/s (output layer 14% of the time) | weights 18235 MB on huge pages
+generation 40 tokens, 7.27 tok/s (output layer 7% of the time) | weights 18235 MB on huge pages
+generation 40 tokens, 7.40 tok/s (output layer 14% of the time) | weights 18235 MB on huge pages
+LOTTERY_DONE
